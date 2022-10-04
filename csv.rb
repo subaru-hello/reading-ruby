@@ -1,4 +1,6 @@
-require "csv"
+# frozen_string_literal: true
+
+require 'csv'
 
 csv_text = <<~CSV_TEXT
   id,name,price,percentage,amount,expiration_date
@@ -11,17 +13,17 @@ csv_text = <<~CSV_TEXT
   7,白ワイン,300,12,90,2023-10-04
 CSV_TEXT
 
-IO.write "sake.csv", csv_text
+IO.write 'sake.csv', csv_text
 
 # ファイルから一行ずつ
-CSV.foreach("sake.csv") do |row|
+CSV.foreach('sake.csv') do |row|
   p row
 end
 # => ["Ruby", "1995"]
 #    ["Rust", "2010"]
 
 # ファイルから一度に
-p CSV.read("sake.csv")
+p CSV.read('sake.csv')
 # => [["Ruby", "1995"], ["Rust", "2010"]]
 
 # 文字列から一行ずつ

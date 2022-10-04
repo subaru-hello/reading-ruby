@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # gem "rails"
-gem 'nokogiri'
-gem 'proxycrawl'
-gem 'open-uri'
 gem 'colored'
+gem 'nokogiri'
+gem 'open-uri'
+gem 'proxycrawl'
