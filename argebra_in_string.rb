@@ -2,9 +2,6 @@
 
 input = gets.split(' ').map(&:to_i)
 
-a,b = input
-
-
-
+a, b = input
 
 puts b - a
