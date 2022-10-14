@@ -103,3 +103,18 @@ Range.new(2, n + 1).each do |i|
   dp[i] = dp[i - 1] + dp[i - 2]
 end
 puts dp[n]
+
+# 値を自分で考える階段漸化式
+
+n, a, b = gets.split(' ').map(&:to_i)
+
+dp = [1]
+
+Range.new(1, n + 1).each do |i|
+  dp[i] = 0
+  dp[i] += dp[i - a] if i >= a
+
+  dp[i] += dp[i - b] if i >= b
+end
+
+puts dp[n]
